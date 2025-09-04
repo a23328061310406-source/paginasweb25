@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nohemi Ramirez - Ciberseguridad</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/schnoerkel-caps" rel="stylesheet">
+    
+    <!-- jQuery y Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <style>
+        :root {
+            --onyx: #36393bff;
+            --uranian-blue: #a5d8ffff;
+            --light-blue: #afd0d6ff;
+            --french-gray: #bfb6bbff;
+            --rosy-brown: #c49799ff;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--light-blue), var(--uranian-blue));
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .jumbotron {
+            background: linear-gradient(135deg, var(--rosy-brown), var(--french-gray));
+            color: white;
+            text-align: center;
+            padding: 60px 15px;
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        .jumbotron h1 {
+            font-family: 'Schnoerkel Caps', serif;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .content-section {
+            background: white;
+            margin: 20px auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 1200px;
+        }
+
+        .section-title {
+            color: var(--onyx);
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: 'Schnoerkel Caps', serif;
+        }
+
+        .malware-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .malware-table th {
+            background: var(--onyx);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .malware-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+
+        .malware-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .malware-table tr:hover {
+            background-color: var(--light-blue);
+            transition: background-color 0.3s ease;
+        }
+
+        .malware-table td:first-child {
+            font-weight: bold;
+            color: var(--onyx);
+        }
+
+        .btn-custom {
+            background: var(--rosy-brown);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background: var(--onyx);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        @media (max-width: 768px) {
+            .malware-table {
+                font-size: 0.9em;
+            }
+            
+            .malware-table th,
+            .malware-table td {
+                padding: 8px;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+
+    <div class="container-fluid">
+        <!-- Hero Section -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-4">¡Hola, soy Nohemi Ramirez!</h1>
+                <p class="lead">Especialista en Ciberseguridad - Explorando el mundo de la protección digital</p>
+                <hr class="my-4" style="border-color: white;">
+                <p>Aquí encontrarás información detallada sobre los diferentes tipos de malware y sus características.</p>
+                <p class="lead">
+                    <a class="btn btn-custom btn-lg" href="#malware-section" role="button">Ver Información</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Malware Content Section -->
+        <div class="content-section" id="malware-section">
+            <h2 class="section-title">Ciberseguridad 01: Tipos de Malware</h2>
+            
+            <div class="table-responsive">
+                <table class="malware-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Malware</th>
+                            <th>Función</th>
+                            <th>Impacto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Virus</td>
+                            <td>Auto replicable, infecta archivos</td>
+                            <td>Daño de datos al igual que de sistema</td>
+                        </tr>
+                        <tr>
+                            <td>Gusanos</td>
+                            <td>Se propaga a través de las redes</td>
+                            <td>Interrupción de la red, agotamiento de recursos</td>
+                        </tr>
+                        <tr>
+                            <td>Caballo de Troya</td>
+                            <td>Se disfraza de software legítimo</td>
+                            <td>Robo de datos, control de sistema</td>
+                        </tr>
+                        <tr>
+                            <td>Software Espía</td>
+                            <td>Supervisa en secreto la actividad del usuario</td>
+                            <td>Violación de privacidad, robo de datos</td>
+                        </tr>
+                        <tr>
+                            <td>Software Publicitario</td>
+                            <td>Muestra anuncios no deseados</td>
+                            <td>Molestia, degradación del rendimiento</td>
+                        </tr>
+                        <tr>
+                            <td>Rootkit</td>
+                            <td>Ocultar software malicioso</td>
+                            <td>Acceso no autorizado, amenazas persistentes</td>
+                        </tr>
+                        <tr>
+                            <td>Keylogger</td>
+                            <td>Registra las pulsaciones de teclas</td>
+                            <td>Robo de credenciales, filtración de datos</td>
+                        </tr>
+                        <tr>
+                            <td>Fileless Malware<br><small>(Malware sin archivos)</small></td>
+                            <td>Corre desde la memoria</td>
+                            <td>Ataques sigilosos y difíciles de detectar</td>
+                        </tr>
+                        <tr>
+                            <td>Cryptojacker</td>
+                            <td>Minería de criptomonedas</td>
+                            <td>Problemas de rendimiento, secuestro de recursos</td>
+                        </tr>
+                        <tr>
+                            <td>Red de Bots (Botnet)</td>
+                            <td>Crea una red de dispositivos infectados</td>
+                            <td>Ataques DDoS, distribución de spam</td>
+                        </tr>
+                        <tr>
+                            <td>Bomba Lógica</td>
+                            <td>Ejecuta código en el disparador</td>
+                            <td>Destrucción de datos, daños al sistema</td>
+                        </tr>
+                        <tr>
+                            <td>Wiper (Limpiador)</td>
+                            <td>Destruye datos</td>
+                            <td>Pérdida irreversible de datos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling para el botón
+        $(document).ready(function(){
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                var target = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top - 20
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
