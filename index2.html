@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap + jQuery (opcional, se mantuvieron tal como tú los tenías) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Fuente opcional -->
+    <link href="https://fonts.cdnfonts.com/css/schnoerkel-caps" rel="stylesheet">
+
+    <title>Nohemi</title>
+
+    <style>
+        /* Paleta rosa / pastel */
+        :root{
+            --rosa-claro: #ffeef8;
+            --rosa-medio: #ff85c1;
+            --rosa-fuerte: #ff42a1;
+            --rosa-acento: #ff6fb3;
+            --texto: #3a0736;
+            --card-bg: #fff5fb;
+            --bordes: rgba(255,66,161,.18);
+        }
+
+        /* Página */
+        body{
+            background: linear-gradient(180deg, #fff0fa 0%, #ffeef8 50%, #fff 100%);
+            color: var(--texto);
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            padding: 18px;
+        }
+
+        /* Encabezados */
+        h1{
+            font-family: "Schnoerkel Caps", sans-serif;
+            color: var(--rosa-fuerte);
+            text-align: center;
+            margin: 4px 0 6px;
+            letter-spacing: 0.6px;
+            text-transform: none;
+        }
+
+        h2{
+            color: var(--rosa-medio);
+            text-align: center;
+            margin-top: 0;
+            font-style: italic; /* título en cursiva si quieres */
+            font-weight: 700;
+        }
+
+        .container-page{
+            max-width: 920px;
+            margin: 10px auto;
+        }
+
+        /* Tapa / card de conceptos (encima de la tabla) */
+        .tapa {
+            background: linear-gradient(180deg, var(--card-bg), #fff7fd);
+            border: 1px solid var(--bordes);
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(255,66,161,0.06);
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        .tapa h3{
+            margin: 0 0 8px;
+            color: var(--rosa-fuerte);
+            font-size: 1.1rem;
+        }
+
+        .tapa p {
+            font-style: italic; /* texto en cursiva */
+            color: #5a2640;
+            margin: 0 0 10px;
+        }
+
+        .tapa ul {
+            display: inline-block;
+            text-align: left;
+            margin: 8px 0 0;
+            padding-left: 18px;
+            color: #4a1f36;
+        }
+
+        .tapa ul li {
+            margin: 6px 0;
+            font-style: italic; /* lista en cursiva */
+        }
+
+        /* Tabla estilizada */
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(60,10,40,0.04);
+        }
+
+        thead th{
+            background: linear-gradient(90deg, var(--rosa-medio), var(--rosa-acento));
+            color: #fff;
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        tbody td{
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(200,100,150,0.07);
+            vertical-align: top;
+            font-style: italic; /* celdas en cursiva como pediste */
+            color: #4b2036;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* filas alternas suaves */
+        tbody tr:nth-child(even){
+            background: linear-gradient(90deg, rgba(255,238,250,0.7), rgba(255,248,250,0.7));
+        }
+
+        /* Responsive */
+        @media (max-width:700px){
+            thead { display: none; }
+            table, tbody, tr, td { display: block; width: 100%; }
+            tr { margin-bottom: 10px; border-radius: 8px; overflow: hidden; }
+            td {
+                padding-left: 50%;
+                position: relative;
+            }
+            td:before {
+                position: absolute;
+                left: 14px;
+                width: 40%;
+                white-space: nowrap;
+                font-weight: 700;
+                color: #6d2d4a;
+            }
+            /* etiquetas para móvil (igual que cabeceras) */
+            td:nth-of-type(1):before { content: "Tipo de Malware"; }
+            td:nth-of-type(2):before { content: "Función"; }
+            td:nth-of-type(3):before { content: "Impacto"; }
+        }
+
+        /* Estética final */
+        footer{
+            text-align: center;
+            margin-top: 14px;
+            color: #6b2f4b;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-page">
+        <h1>Ciber seguridad 01</h1>
+        <h2>Tipos de Malware</h2>
+
+        <!-- Tapa / card: "Conceptos" -->
+        <div class="tapa" role="note" aria-label="Conceptos incluidos">
+            <h3>Conceptos</h3>
+            <p>Esta tabla contiene los principales tipos de malware, su función y el impacto que pueden causar.</p>
+            <ul>
+                <li>Definición breve de cada tipo de malware</li>
+                <li>Cómo se comporta / vector de propagación</li>
+                <li>Consecuencias e impacto en sistemas y privacidad</li>
+            </ul>
+        </div>
+
+        <!-- Tabla principal -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de Malware</th>
+                    <th>Función</th>
+                    <th>Impacto</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Virus</td>
+                    <td>Auto-replicable, infecta archivos y programas.</td>
+                    <td>Daño de datos y posible alteración del sistema.</td>
+                </tr>
+
+                <tr>
+                    <td>Gusanos (Worms)</td>
+                    <td>Se propaga a través de redes sin intervención del usuario.</td>
+                    <td>Interrupción de la red y agotamiento de recursos.</td>
+                </tr>
+
+                <tr>
+                    <td>Caballo de Troya (Troyano)</td>
+                    <td>Se disfraza de software legítimo para engañar al usuario.</td>
+                    <td>Robo de datos y control remoto del sistema.</td>
+                </tr>
+
+                <tr>
+                    <td>Software espía (Spyware)</td>
+                    <td>Supervisa la actividad del usuario en secreto.</td>
+                    <td>Violación de la privacidad y robo de información.</td>
+                </tr>
+
+                <tr>
+                    <td>Adware (Software publicitario)</td>
+                    <td>Muestra anuncios no deseados y puede rastrear comportamiento.</td>
+                    <td>Molestia para el usuario y degradación del rendimiento.</td>
+                </tr>
+
+                <tr>
+                    <td>Rootkit</td>
+                    <td>Oculta la presencia de malware y mantiene acceso privilegiado.</td>
+                    <td>Acceso no autorizado y amenazas persistentes difíciles de detectar.</td>
+                </tr>
+
+                <tr>
+                    <td>Keylogger</td>
+                    <td>Registra las pulsaciones de teclado para capturar credenciales.</td>
+                    <td>Robo de contraseñas y filtración de datos personales.</td>
+                </tr>
+
+                <tr>
+                    <td>Fileless Malware</td>
+                    <td>Opera en memoria sin dejar archivos en disco.</td>
+                    <td>Ataques sigilosos y difíciles de detectar por antivirus tradicionales.</td>
+                </tr>
+
+                <tr>
+                    <td>Cryptojacker</td>
+                    <td>Minado no autorizado de criptomonedas usando recursos del equipo.</td>
+                    <td>Rendimiento reducido y consumo excesivo de energía.</td>
+                </tr>
+
+                <tr>
+                    <td>Botnet (Red de bots)</td>
+                    <td>Red de dispositivos infectados controlados por un atacante.</td>
+                    <td>Uso para DDoS, envío masivo de spam y ataques coordinados.</td>
+                </tr>
+
+                <tr>
+                    <td>Bomba lógica (Logic Bomb)</td>
+                    <td>Ejecuta código malicioso al cumplirse una condición (trigger).</td>
+                    <td>Destrucción de datos o daño programado al sistema.</td>
+                </tr>
+
+                <tr>
+                    <td>Wiper</td>
+                    <td>Malware diseñado para destruir o sobrescribir datos.</td>
+                    <td>Pérdida irreversible de información y daño operacional.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <footer>Documento: Resumen de tipos de malware — Nohemi</footer>
+    </div>
+</body>
+</html>
