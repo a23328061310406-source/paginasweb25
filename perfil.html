@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts para un estilo más suave -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
+
+    <title>Remy Lebeau</title>
+
+    <style>
+        /* Fondo general */
+        body {
+            background-color: #ffe6f0;
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Contenedor centrado */
+        .center {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 900px;
+        }
+
+        /* Título */
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #d63384;
+            margin-bottom: 30px;
+        }
+
+        /* Estilo tabla */
+        table {
+            background-color: #fff0f5;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        td, th {
+            padding: 15px;
+            text-align: left;
+            color: #444;
+        }
+
+        tr {
+            background-color: #ffe6f0;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fcd6e9;
+        }
+
+        img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 8px double #ffb3d1;
+            display: block;
+            margin: auto;
+        }
+
+        /* Secciones encabezado */
+        table td[colspan="2"] {
+            background-color: #ffcce6;
+            color: #b30059;
+            font-weight: 700;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        i.fa {
+            margin-right: 8px;
+            color: #cc6699;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        /* Inputs con foco (si se usan) */
+        input:focus {
+            outline: 3px solid #ff66a3;
+        }
+
+        /* Texto en gris claro */
+        td p:first-child {
+            color: #888;
+        }
+
+        /* Corregir negritas excesivas */
+        b {
+            color: #cc3366;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="center">
+    <h1>Los de 5A</h1>
+
+    <!-- Tabla de Perfil -->
+    <table>
+        <tr>
+            <td>
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Snoopy_Peanuts.png" alt="Snoopy">
+            </td>
+            <td>
+                <p><b>Gambit</b></p>
+                <p><b>Genero:</b> Femenino</p>
+                <p><b>Raza:</b> Person</p>
+                <p><b>Nacimiento:</b> Junio 2008</p>
+                <p><b>Calle:</b> 708 Street</p>
+                <p><b>Ciudad:</b> Reynosa, Tamaulipas</p>
+                <p><b>Telefono:</b> 305-672-2733</p>
+                <p><b>Celular:</b> 890-453-566</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Gambit de Snoopy</b></td>
+        </tr>
+    </table>
+
+    <!-- Tabla de Información Básica -->
+    <table>
+        <tr>
+            <td colspan="2"><i class="fa fa-user"></i> INFORMACIÓN BÁSICA <i class="fa fa-question-circle"></i></td>
+        </tr>
+        <tr>
+            <td>
+                <p>Mail</p>
+                <p>Altura</p>
+                <p>Peso</p>
+                <p>Color de Pelo</p>
+                <p>Tipo de Sangre</p>
+                <p>Signo Zodiacal</p>
+                <p>Apellido Materno</p>
+                <p>Estado Civil</p>
+                <p>Educación</p>
+                <p>Historia de Enfermedades</p>
+            </td>
+            <td>
+                <p><b>nohemir878@gmail.com</b></p>
+                <p><b>1.70 mts</b></p>
+                <p><b>64 kg</b></p>
+                <p><b>Cafe</b></p>
+                <p><b>O-</b></p>
+                <p><b>Cancer</b></p>
+                <p><b>Castro</b></p>
+                <p><b>Soltera</b></p>
+                <p><b>High-School</b></p>
+                <p><b>Ninguna</b></p>
+            </td>
+        </tr>
+
+        <!-- Tabla de Empleo -->
+        <tr>
+            <td colspan="2"><i class="fa fa-check-square"></i> INFORMACIÓN DE EMPLEO <i class="fa fa-question-circle"></i></td>
+        </tr>
+        <tr>
+            <td>
+                <p>Estado del Empleo</p>
+                <p>Salario Mensual</p>
+                <p>Nombre de la Empresa</p>
+                <p>Tamaño de la Empresa</p>
+                <p>Industria</p>
+            </td>
+            <td>
+                <p><b>Tiempo Completo</b></p>
+                <p><b>$50,000</b></p>
+                <p><b>Peanuts</b></p>
+                <p><b>no se</b></p>
+                <p><b>Peanuts</b></p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
